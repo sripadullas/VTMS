@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  color: white;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.title {
+  margin-top: 30px;
+  animation: slideDown 0.8s ease;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Form */
+.form-box input {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #00c6ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #0072ff;
+}
+
+/* Vehicle cards */
+.vehicle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vehicle-card {
+  background: white;
+  color: black;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 12px;
+  width: 220px;
+  position: relative;
+  animation: popUp 0.4s ease;
+  transition: 0.3s;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes popUp {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Delete button */
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Empty message */
+#emptyMsg {
+  margin-top: 20px;
+  opacity: 0.7;
+}
