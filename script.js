@@ -1,38 +1,39 @@
-function addVehicle() {
-  const name = document.getElementById("vehicleName").value;
-  const number = document.getElementById("vehicleNumber").value;
-  const list = document.getElementById("vehicleList");
-  const emptyMsg = document.getElementById("emptyMsg");
+/* existing styles stay same — just add below */
 
-  if (!name || !number) {
-    alert("Please enter all details");
-    return;
-  }
-
-  const card = document.createElement("div");
-  card.classList.add("vehicle-card");
-
-  card.innerHTML = `
-    <button class="delete-btn" onclick="this.parentElement.remove(); checkEmpty()">×</button>
-    <h3>${name}</h3>
-    <p>${number}</p>
-  `;
-
-  list.appendChild(card);
-
-  document.getElementById("vehicleName").value = "";
-  document.getElementById("vehicleNumber").value = "";
-
-  checkEmpty();
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 15px;
 }
 
-function checkEmpty() {
-  const list = document.getElementById("vehicleList");
-  const emptyMsg = document.getElementById("emptyMsg");
+.stats div {
+  background: rgba(255,255,255,0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 
-  if (list.children.length === 0) {
-    emptyMsg.style.display = "block";
-  } else {
-    emptyMsg.style.display = "none";
-  }
+/* Search bar */
+#search {
+  padding: 10px;
+  width: 60%;
+  margin: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Status badge */
+.status {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+}
+
+.active {
+  background: green;
+}
+
+.inactive {
+  background: gray;
 }
