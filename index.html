@@ -9,6 +9,16 @@
   <h1 class="title">🚗 VTMS Dashboard</h1>
   <p class="subtitle">Vehicle Tracking Management System</p>
 
+  <!-- Stats -->
+  <div class="stats">
+    <div>Total Vehicles: <span id="total">0</span></div>
+    <div>Active: <span id="active">0</span></div>
+  </div>
+
+  <!-- Search -->
+  <input type="text" id="search" placeholder="Search vehicle..." onkeyup="searchVehicle()">
+
+  <!-- Form -->
   <div class="form-box">
     <input type="text" id="vehicleName" placeholder="Vehicle Name">
     <input type="text" id="vehicleNumber" placeholder="Vehicle Number">
